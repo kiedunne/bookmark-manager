@@ -37,8 +37,8 @@ SimpleCov.start
 RSpec.configure do |config|
   config.after(:suite) do
     puts
-    puts "\e[33mHave you considered killing yourself? It will help you improve your code!\e[0m"
-    puts "\e[33mTry it now! Just run: dignitas(self)\e[0m"
+    puts "\e[33mHave you considered rubocop? It will help you improve your code!\e[0m"
+    puts "\e[33mTry it now! Just run: rubocop\e[0m"
   end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

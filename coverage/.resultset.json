@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kirillzabrodin/Projects/bookmark_manager_app/spec/bookmark_spec.rb": [
+      "/Users/jacklyndunne/Documents/GitHub/bookmark_manager_app/spec/bookmark_spec.rb": [
         1,
         null,
         1,
@@ -14,7 +14,7 @@
         null,
         null
       ],
-      "/Users/kirillzabrodin/Projects/bookmark_manager_app/lib/bookmark_list.rb": [
+      "/Users/jacklyndunne/Documents/GitHub/bookmark_manager_app/lib/bookmark_list.rb": [
         1,
         null,
         1,
@@ -31,7 +31,7 @@
         null,
         null
       ],
-      "/Users/kirillzabrodin/Projects/bookmark_manager_app/spec/features/bookmark_view_spec.rb": [
+      "/Users/jacklyndunne/Documents/GitHub/bookmark_manager_app/spec/features/bookmark_view_spec.rb": [
         1,
         1,
         1,
@@ -39,7 +39,7 @@
         null,
         null
       ],
-      "/Users/kirillzabrodin/Projects/bookmark_manager_app/spec/features/index_spec.rb": [
+      "/Users/jacklyndunne/Documents/GitHub/bookmark_manager_app/spec/features/index_spec.rb": [
         1,
         1,
         1,
@@ -48,6 +48,6 @@
         null
       ]
     },
-    "timestamp": 1542638983
+    "timestamp": 1542639767
   }
 }

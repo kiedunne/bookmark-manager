@@ -1,4 +1,5 @@
 class BookmarkList
+# attr_reader :bookmarks
 
   def view
     "A bookmarks list"

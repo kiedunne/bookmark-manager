@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/bookmark_list.rb'
 
 # here is a comment for rubocop
 class BookmarkManager < Sinatra::Base
@@ -8,6 +9,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/' do
+    @bookmarks = BookmarkList.create
     erb(:index)
   end
 
