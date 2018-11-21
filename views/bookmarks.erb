@@ -6,9 +6,11 @@
   </head>
 
   <body>
-    <h1>WAOW! Look at all these bookmarks!!!</h1>
-
-    <h2><%= @bookmarks.view %></h2>
+    <ul>
+      <% @bookmarks.each do |bookmark| %>
+      <li><%= bookmark %></li>
+      <% end %>
+    </ul>
 
   </body>
 </html>

@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+  <style>
+
+    a.buttons {
+      background-color: #f21145;
+      border-radius: 15px;
+      font-family: arial;
+      text-align: center;
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      padding: 20px;
+      transition-duration: 0.2s;
+    }
+
+    a.buttons:hover, a:active {
+      background-color: white;
+      color: #f21145;
+      border: 2px solid #f21145;
+    }
+
+  </style>
+
     <meta charset="utf-8">
     <title>Bookmark Manager</title>
   </head>
 
   <body>
     <h1>Welcome to the bookmark manager.</h1>
-
-    <form action='/bookmarks' method='get'>
-    <div class="bookmark_button">
-      <button type="submit">See Bookmarks</button>
-    </div>
-
-
+    <br>
+    <a class="buttons" href='/bookmarks'>See Bookmarks</a>
   </body>
 </html>

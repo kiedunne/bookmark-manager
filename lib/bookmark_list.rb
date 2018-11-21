@@ -1,16 +1,16 @@
+require 'pg'
+
 class BookmarkList
-# attr_reader :bookmarks
 
-  def view
-    "A bookmarks list"
-  end
+  def self.all
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
+    end
 
-  def self.instance
-    @bookmarks
-  end
-
-  def self.create
-    @bookmarks = BookmarkList.new
+    bookmarks = connection.exec("SELECT * FROM bookmarks;")
+    bookmarks.map { |bookmark| bookmark['url'] }
   end
 
 end
