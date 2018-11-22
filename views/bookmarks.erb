@@ -42,34 +42,81 @@
         text-decoration: none;
         padding: 20px;
         transition-duration: 0.2s;
+    
       }
       a.bookmark_links:hover, a:active {
         background-color: white;
         color: #f21145;
         border: 2px solid #f21145;
       }
-      ul.bookmark_list {
+      div.bookmark_list {
         display: flex;
         flex-direction: column;
-        flex-align: center;
+        align-items: center;
+        justify-content: center;
         padding: 0px;
+      }
+      div.bookmark_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      a.delete_button {
+        background-color: #5f9bf4;
+        border-radius: 15px;
+        font-family: arial;
+        text-align: center;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        text-decoration: none;
+        padding: 20px;
+        transition-duration: 0.2s;
+      }
+      a.edit_button {
+        background-color: #83ea7c;
+        border-radius: 15px;
+        font-family: arial;
+        text-align: center;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        text-decoration: none;
+        padding: 20px;
+        transition-duration: 0.2s;
+
+      a.edit_button:hover, a:active {
+        background-color: white;
+        color: #83ea7c;
+        border: 2px solid #83ea7c;
       }
 
     </style>
+
   </head>
   <div class='button_menu'>
     <a class="buttons" href='/add_bookmark'>Add Bookmark</a>
-    <a class="buttons" href='/add_bookmark'>Delete Bookmark</a>
+    <a class="buttons" href='/delete_bookmark'>Delete Bookmark</a>
   </div>
   <br>
   <br>
   <body>
     <h1>Saved Bookmarks</h1>
-      <ul class="bookmark_list">
+      <div class="bookmark_list">
         <% @bookmarks.each do |bookmark| %>
-        <a class='bookmark_links' href="<%= bookmark.url %>"><%= bookmark.title %></a>
+        <div class='bookmark_row'>
+            <a class='bookmark_links' href="<%= bookmark.url %>"><%= bookmark.title %></a>
+
+              <form action="/bookmarks/<%= bookmark.id %>" method="post">
+              <input type='hidden' name='_method' value='DELETE'/>
+              <input type="submit" value="Delete" />
+              </form>
+
+              <a class="edit_button" href='/edit_bookmarks'>Edit</a>
+        </div>
         <% end %>
-      </ul>
+      </div>
     <br>
     <br>
   </body>

@@ -29,16 +29,23 @@ describe BookmarkList do
     end
   end
 
-
   describe '.delete' do
     it "deletes a bookmark" do
       connection = PG.connect(dbname: 'bookmark_manager_test')
+      bookmark = BookmarkList.create('http://www.testbookmark.com','Test Bookmark')
 
-
-
-
-      
+      BookmarkList.delete(bookmark.id)
+      expect(BookmarkList.all.length).to eq 0
     end
   end
 
+  describe '.edit' do
+    it "edits a bookmark" do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+      bookmark = BookmarkList.create('http://www.testbookmark.com','Test Bookmark')
+
+      BookmarkList.edit(bookmark.id, bookmark.title, bookmark.url)
+      expect(BookmarkList.all).not_to include bookmark
+    end
+  end
 end

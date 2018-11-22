@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <style>
+    h1 {
+      font-family: arial;
+      text-align: center;
+      color: #3f3d3d;
+      font-size: 70px;
+    }
+    a.buttons {
+      background-color: #5f9bf4;
+      border-radius: 15px;
+      font-family: arial;
+      text-align: center;
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      text-decoration: none;
+      padding: 20px;
+      transition-duration: 0.2s;
+    }
+    a.buttons:hover, a:active {
+      background-color: white;
+      color: #5f9bf4;
+      border: 2px solid #5f9bf4;
+    }
+
+    div.form_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+  </style>
+
+    <meta charset="utf-8">
+    <title>Edit Bookmark</title>
+  </head>
+
+  <body>
+    <br>
+    <a class="buttons" href='/bookmarks'>See Bookmarks</a>
+    <br>
+    <h1>Edit Bookmark</h1>
+    <br>
+    <br>
+    <div class='form_container'>
+
+      <form action='/edit_bookmarks/:id' method="post">
+        <input type="hidden" name="_method" value="PATCH" />
+        <label for='url'>URL</label>
+          <input type='text' name='url'>
+
+        <label for='title'>Title</label>
+          <input type='text' name='title'>
+          
+        <button type="submit">Update bookmark</button>
+      </form>
+
+    </div>
+      <br>
+      <br>
+  </body>
+</html>
