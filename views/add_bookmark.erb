@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
   <head>
   <style>
-
     a.buttons {
       background-color: #f21145;
       border-radius: 15px;
@@ -20,17 +19,27 @@
       color: #f21145;
       border: 2px solid #f21145;
     }
-
   </style>
 
     <meta charset="utf-8">
-    <title>Bookmark Manager</title>
+    <title>Add Bookmark</title>
   </head>
 
   <body>
-    <h1>Welcome to the bookmark manager.</h1>
+    <h1>Add Bookmark</h1>
     <br>
-    <a class="buttons" href='/bookmarks'>See Bookmarks</a>
-    <a class="buttons" href='/add_bookmark'>Add Bookmark</a>
+      <form action='/bookmarks' method="post">
+        <label for='url'>URL</label>
+        <input type='text' name='url'>
+
+        <label for='title'>Title</label>
+        <input type='text' name='title'>
+
+        <button type="submit">Add bookmark</button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <a class="buttons" href='/bookmarks'>See Bookmarks</a>
   </body>
 </html>
